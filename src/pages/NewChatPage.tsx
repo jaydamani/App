@@ -68,7 +68,7 @@ function useOptions() {
             {
                 betas: betas ?? [],
                 selectedOptions,
-                includeSelfDM: true,
+                includeSelfDM: selectedOptions.length === 0,
             },
         );
         return filteredOptions;
@@ -167,7 +167,7 @@ function NewChatPage() {
 
         sectionsList.push({
             title: translate('common.recents'),
-            data: selectedOptions.length ? recentReports.filter((option) => !option.isSelfDM) : recentReports,
+            data: recentReports,
             shouldShow: !isEmpty(recentReports),
         });
         if (!firstKey) {
