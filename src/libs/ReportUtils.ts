@@ -732,6 +732,7 @@ type OptionData = {
     icons?: Icon[];
     iouReportAmount?: number;
     displayName?: string;
+    shouldShowGreenDotIndicator?: boolean;
 } & Report &
     ReportNameValuePairs;
 
